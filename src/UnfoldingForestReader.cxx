@@ -1,5 +1,8 @@
 // Implementation for UnfoldingForestReader
 
+// Root includes
+#include <TMath.h>
+
 // Own includes
 #include "UnfoldingForestReader.h"
 

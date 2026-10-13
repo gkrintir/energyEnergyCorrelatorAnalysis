@@ -2,6 +2,9 @@
  * Implementation of SystematicUncertaintyOrganizer
  */
 
+// C++ includes
+#include <stdexcept>
+
 #include "SystematicUncertaintyOrganizer.h"
 
 /*
@@ -141,7 +144,7 @@ void SystematicUncertaintyOrganizer::ReadInputFile(TFile* inputFile){
   // ============================================================================================= //
 
   // First, find at least one histogram that is not NULL
-  TH1D* exampleHistogram;
+  TH1D* exampleHistogram = nullptr;
   bool exampleFound = false;
   for(int iCentrality = firstStudiedCentralityBin; iCentrality <= lastStudiedCentralityBin && !exampleFound; iCentrality++){
     for(int iJetPt = firstStudiedJetPtBinEEC; iJetPt <= lastStudiedJetPtBinEEC && !exampleFound; iJetPt++){
@@ -156,6 +159,10 @@ void SystematicUncertaintyOrganizer::ReadInputFile(TFile* inputFile){
       } // Track pT loop
     } // Jet pT loop
   } // Centrality loop
+
+  if(!exampleFound){
+    throw std::runtime_error("SystematicUncertaintyOrganizer::ReadInputFile: no systematic uncertainty histograms found in the unfolded bin range.");
+  }
 
   // Find all histograms that are NULL, and set them as error zero histograms
   for(int iCentrality = firstStudiedCentralityBin; iCentrality <= lastStudiedCentralityBin; iCentrality++){

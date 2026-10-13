@@ -470,8 +470,8 @@ private:
   TH2D* fhTrackEtaPhi[knTrackCategories][kMaxCentralityBins][kMaxTrackPtBins+1];  // 2D eta-phi histogram for track
 
   // Histograms for multiplicity and particle density within the jet cones
-  TH1D* fhMultiplicityInJetCone[kMaxCentralityBins][kMaxJetPtBinsEEC][kMaxTrackPtBins][knMultiplicityInJetConeTypes][EECHistograms::knSubeventTypes+1];
-  TH1D* fhParticleDensityAroundJetAxis[kMaxCentralityBins][kMaxJetPtBinsEEC][kMaxTrackPtBins][EECHistograms::knJetConeTypes][knParticleDensityAroundJetAxisTypes][EECHistograms::knSubeventTypes + 1];
+  TH1D* fhMultiplicityInJetCone[kMaxCentralityBins][kMaxJetPtBinsEEC][kMaxTrackPtBinsEEC][knMultiplicityInJetConeTypes][EECHistograms::knSubeventTypes+1];
+  TH1D* fhParticleDensityAroundJetAxis[kMaxCentralityBins][kMaxJetPtBinsEEC][kMaxTrackPtBinsEEC][EECHistograms::knJetConeTypes][knParticleDensityAroundJetAxisTypes][EECHistograms::knSubeventTypes + 1];
 
   // Histograms for maximum particle pT within the jet cone
   TH1D* fhMaxParticlePtInJetConePtCut[knMaxParticlePtWithinJetConeTypes][kMaxCentralityBins][kMaxJetPtBinsEEC][knProjectedMaxParticlePtBins];

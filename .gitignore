@@ -26,6 +26,7 @@ eecAnalysis
 eecAnalysis.dSYM
 plotting/nanoDict.cc
 plotting/nanoDict_rdict.pcm
+plotting/DrawingClasses_rdict.pcm
 
 # Ignore analysis tar ball
 eec5TeV.tar.gz

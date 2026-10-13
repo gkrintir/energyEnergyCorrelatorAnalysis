@@ -58,7 +58,7 @@ EECDrawer::EECDrawer(EECHistogramManager *inputHistograms) :
   for(int iParticleDensityType = 0; iParticleDensityType < EECHistogramManager::knParticleDensityAroundJetAxisTypes; iParticleDensityType++){
     fDrawParticleDensityAroundJets[iParticleDensityType] = false;
   }
-  for(int iMaxParticlePtWithinJetCone = 0; iMaxParticlePtWithinJetCone < EECHistogramManager::knParticleDensityAroundJetAxisTypes; iMaxParticlePtWithinJetCone++){
+  for(int iMaxParticlePtWithinJetCone = 0; iMaxParticlePtWithinJetCone < EECHistogramManager::knMaxParticlePtWithinJetConeTypes; iMaxParticlePtWithinJetCone++){
     fDrawMaxParticlePtWithinJetCone[iMaxParticlePtWithinJetCone] = false;
   }
   for(int iEnergyEnergyCorrelator = 0; iEnergyEnergyCorrelator < EECHistogramManager::knEnergyEnergyCorrelatorTypes; iEnergyEnergyCorrelator++){

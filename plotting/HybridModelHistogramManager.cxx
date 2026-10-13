@@ -2,6 +2,12 @@
  * Implementation of HybridModelHistogramManager
  */
 
+// C++ includes
+#include <cstddef>
+
+// Root includes
+#include <TMath.h>
+
 // Own includes
 #include "HybridModelHistogramManager.h"
 
@@ -150,7 +156,7 @@ void HybridModelHistogramManager::LoadGraphs(TString inputDirectory){
             TObjArray* parameterArray;
             TObjString* currentParameterObject;
             TString currentParameter;
-            for(int iPoint = 0; iPoint < lineVector.size(); iPoint++){
+            for(std::size_t iPoint = 0; iPoint < lineVector.size(); iPoint++){
 
               // The different parameters are separated by tab character, so tokenize strings to get individual parameters
               parameterArray = lineVector.at(iPoint).Tokenize("\t");

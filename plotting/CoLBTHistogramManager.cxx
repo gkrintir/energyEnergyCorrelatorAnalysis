@@ -2,6 +2,12 @@
  * Implementation of CoLBTHistogramManager
  */
 
+// C++ includes
+#include <cstddef>
+
+// Root includes
+#include <TMath.h>
+
 // Own includes
 #include "CoLBTHistogramManager.h"
 
@@ -147,7 +153,7 @@ void CoLBTHistogramManager::LoadGraphs(TString inputDirectory){
             TString currentParameter;
 
             // Skip the first line in the file. It only contains comments
-            for(int iLine = 1; iLine < lineVector.size(); iLine++){
+            for(std::size_t iLine = 1; iLine < lineVector.size(); iLine++){
 
               // The different parameters are separated by spaces, so tokenize strings to get individual parameters
               parameterArray = lineVector.at(iLine).Tokenize(" ");

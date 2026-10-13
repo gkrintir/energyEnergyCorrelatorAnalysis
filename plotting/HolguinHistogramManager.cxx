@@ -2,6 +2,12 @@
  * Implementation of HolguinHistogramManager
  */
 
+// C++ includes
+#include <cstddef>
+
+// Root includes
+#include <TMath.h>
+
 // Own includes
 #include "HolguinHistogramManager.h"
 
@@ -200,7 +206,7 @@ std::vector<std::pair<double, TGraph*>> HolguinHistogramManager::GetGraphsFromDa
   int numberOfParameters;
   TObjString* currentParameterObject;
   TString currentParameter;
-  for(int iLine = 0; iLine < lineVector.size(); iLine++){
+  for(std::size_t iLine = 0; iLine < lineVector.size(); iLine++){
     parameterArray = lineVector.at(iLine).Tokenize(" ");
     numberOfParameters = parameterArray->GetEntries();
     for(int iParameter = 0; iParameter < numberOfParameters; iParameter++){   // Loop over all the files in the array

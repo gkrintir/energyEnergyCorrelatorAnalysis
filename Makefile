@@ -2,7 +2,7 @@ PROGRAM       = eecAnalysis
 
 version       = development
 CXX           = g++
-CXXFLAGS      = -g -Wall -D$(version)
+CXXFLAGS      = -O2 -g -Wall -D$(version)
 LDFLAGS       = -O2
 #############################################
 # -bind_at_load helps to remove linker error
